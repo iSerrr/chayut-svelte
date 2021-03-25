@@ -1,0 +1,414 @@
+/* stylelint-disable */
+/* ------------------------------------------------------------ *\
+    Base WordPress CSS
+    Feel free to modify or outright delete these default styles.
+\* ------------------------------------------------------------ */
+
+.alignnone,
+.alignleft,
+.alignright,
+.aligncenter {
+  margin: 5px 15px 10px;
+}
+
+.alignleft {
+  float: left;
+  margin-left: 0;
+}
+
+.alignright {
+  float: right;
+  margin-right: 0;
+}
+
+.alignnone {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption {
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  &-text {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+  }
+}
+
+/* ------------------------------------------------------------ *\
+    Articles
+\* ------------------------------------------------------------ */
+
+.articles {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------------------------------------------------ *\
+    Sidebar
+\* ------------------------------------------------------------ */
+
+.widgets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------------------------------------------------ *\
+    Gallery
+\* ------------------------------------------------------------ */
+
+.gallery {
+  overflow: hidden;
+  padding-bottom: 20px;
+  position: relative;
+
+  &-item {
+    float: left;
+    padding: 10px;
+    position: relative;
+
+    .gallery-columns-1 & {
+      width: 100%;
+    }
+
+    .gallery-columns-2 & {
+      width: 50%;
+    }
+
+    .gallery-columns-3 & {
+      width: 33.33%;
+    }
+
+    .gallery-columns-4 & {
+      width: 25%;
+    }
+
+    .gallery-columns-5 & {
+      width: 20%;
+    }
+
+    .gallery-columns-6 & {
+      width: 16.67%;
+    }
+
+    .gallery-columns-7 & {
+      width: 14.29%;
+    }
+
+    .gallery-columns-8 & {
+      width: 12.5%;
+    }
+
+    .gallery-columns-9 & {
+      width: 11.11%;
+    }
+  }
+
+  .wp-caption {
+    .gallery-columns-7 &,
+    .gallery-columns-8 &,
+    .gallery-columns-9 & {
+      display: none;
+    }
+
+    &-text {
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      text-align: left;
+    }
+  }
+}
+
+/* ------------------------------------------------------------ *\
+    Pagination
+\* ------------------------------------------------------------ */
+
+.paging {
+  padding: 0 0 20px;
+  text-align: center;
+
+  ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul,
+  li {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  a {
+    border: 1px solid #000;
+    display: inline-block;
+    margin: 0 2px;
+    padding: 4px 10px;
+    text-decoration: none;
+  }
+
+  .current a,
+  a:hover {
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.paging-label {
+  padding-right: 10px;
+}
+
+/* ------------------------------------------------------------ *\
+    Comments
+\* ------------------------------------------------------------ */
+
+.section-comments {
+  padding-top: 15px;
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    padding-bottom: 18.2px;
+  }
+
+  ol,
+  ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  h3 {
+    padding: 0 0 10px;
+    position: relative;
+
+    small {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+
+.comments {
+  position: relative;
+
+  .children {
+    padding-left: 70px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+    }
+
+    &::before {
+      border-bottom: 8px solid #c3c3c3;
+      border-left: 8px solid #c3c3c3;
+      height: 27px;
+      left: 23px;
+      top: 33px;
+      width: 32px;
+    }
+
+    &::after {
+      border: 20px solid transparent;
+      border-bottom-color: #c3c3c3;
+      border-width: 20px 19px;
+      left: 8px;
+      top: -5px;
+    }
+  }
+}
+
+.comment {
+  padding: 30px 0 30px 65px;
+  position: relative;
+
+  .avatar {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    height: 48px;
+    left: 0;
+    position: absolute;
+    top: 28px;
+    width: 48px;
+  }
+
+  &__says {
+    padding-left: 5px;
+  }
+
+  &__moderation-notice {
+    color: #999;
+    display: inline-block;
+    margin: 3px 0 8px;
+  }
+
+  &__meta {
+    padding-bottom: 12px;
+
+    a {
+      color: #363636;
+    }
+  }
+
+  &__text {
+    p:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__reply {
+    padding-top: 10px;
+    text-align: right;
+
+    a {
+      background: #363636;
+      color: #fff;
+      display: inline-block;
+      padding: 5px 10px;
+
+      &:hover {
+        opacity: 0.8;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.comment-respond {
+  border-top: 1px solid #363636;
+  padding-top: 30px;
+  width: 100%;
+
+  h3 {
+    position: relative;
+  }
+
+  small {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  label {
+    display: block;
+    padding-bottom: 4px;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='url'],
+  textarea {
+    background: #f7f7f7;
+    border: 1px solid #ccc;
+    display: block;
+    padding: 10px;
+    width: 80%;
+  }
+
+  textarea {
+    height: 100px;
+    width: 100%;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='url'] {
+    &:focus {
+      background-color: #fff;
+    }
+
+    &::placeholder {
+      color: #777;
+    }
+  }
+
+  .required {
+    color: #e40000;
+  }
+
+  .comment-notes {
+    padding-top: 15px;
+  }
+
+  .form-submit input {
+    background: #363636;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+    width: 160px;
+  }
+}
+
+.no-comments {
+  font-size: $fz-md;
+  font-weight: bold;
+  padding-top: 12px;
+}
+
+/* ------------------------------------------------------------ *\
+    Search Form
+\* ------------------------------------------------------------ */
+
+.search-form {
+  overflow: hidden;
+  position: relative;
+
+  &__field {
+    background: #f7f7f7;
+    border: 1px solid #ccc;
+    display: block;
+    padding: 10px;
+    width: 100%;
+
+    &:focus {
+      background-color: #fff;
+    }
+
+    &::placeholder {
+      color: #777;
+    }
+  }
+
+  .screen-reader-text {
+    height: 0;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 0;
+  }
+}

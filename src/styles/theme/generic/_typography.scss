@@ -1,0 +1,42 @@
+// Typography rules (common text and heading styles).
+// In general, you should be able to style the typography by
+// customizing the Bootstrap variables. Place them in styles/_variables.scss.
+
+.font-lato {
+  font-family: $font-lato;
+  font-weight: 400;
+}
+
+/**
+ *
+ * Page Heading
+ *
+ */
+
+%heading-h1 {
+  font-family: $font-practica-narrow;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 4px;
+
+  @include mobile-sm-up {
+    font-size: 46px;
+    margin-bottom: 3px;
+  }
+
+  @include tablet-up {
+    font-size: 60px;
+    margin-bottom: 1px;
+  }
+
+  @include tablet-large-up {
+    font-size: 70px;
+    margin-bottom: -3px;
+  }
+
+  @include desktop-up {
+    font-size: 80px;
+    margin-bottom: 3px;
+  }
+}

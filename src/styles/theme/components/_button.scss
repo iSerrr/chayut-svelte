@@ -1,0 +1,194 @@
+button {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+
+  &:focus,
+  &:active {
+    outline: 0;
+  }
+}
+
+/**
+ *
+ * Buttons
+ *
+ */
+
+%btn-base {
+  border: 2px solid transparent;
+  border-radius: 30px;
+  font-family: $font-practica-narrow;
+  font-size: $fz-lg;
+  font-weight: 700;
+  min-width: 140px;
+  padding: 0 33px;
+
+  @include btn-active-selector {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: none;
+    outline: 0;
+  }
+}
+
+%btn-primary {
+  @include button-height(52px);
+  box-shadow: $box-shadow;
+}
+
+%btn-primary-outline {
+  @extend %btn-base;
+  /*@include button-height(42px);*/
+  padding: 0.6em 3em 0.5em;
+  border-color: $c-grey;
+  /*min-width: 169px;*/
+}
+
+.btn {
+  @extend %btn-base;
+
+  &-primary-solid {
+    @extend %btn-primary;
+    background-color: $c-supernova;
+
+    @include tablet-large-up {
+      &:hover {
+        background-color: $white;
+      }
+    }
+  }
+
+  &-primary-solid--wide {
+    min-width: 266px;
+  }
+
+  &-primary-outline {
+    @extend %btn-primary-outline;
+
+    @include hover {
+      background-color: $c-supernova;
+      border-color: $c-supernova;
+    }
+  }
+
+  &-primary-outline--white {
+    border-color: $white;
+    color: $white;
+
+    @include hover {
+      background-color: $white;
+      border-color: $white;
+    }
+  }
+}
+
+/**
+ *
+ * Button Burger
+ * Button Nav
+ *
+ */
+
+.btn-nav {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  color: $white;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  padding-top: 14px;
+  position: relative;
+  width: 21px;
+  z-index: 15;
+
+  &:focus {
+    outline: 0;
+  }
+
+  span::after,
+  &::after,
+  &::before {
+    background: currentColor;
+    border-radius: 6px;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition-duration: $trs;
+    transition-property: transform, visibility, opacity;
+    transition-timing-function: linear;
+    width: 100%;
+  }
+
+  span::after {
+    top: 0;
+  }
+
+  &::after {
+    top: 6px;
+  }
+
+  &::before {
+    top: 12px;
+  }
+
+  &.active {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/**
+ *
+ * Button Close Nav
+ *
+ */
+
+.btn-close-nav {
+  position: absolute;
+  right: 13px;
+  top: 19px;
+
+  @include mobile-xs-down {
+    left: 13px;
+  }
+}
+
+/**
+ *
+ * Button Play
+ *
+ */
+
+.btn-play {
+  align-items: center;
+  border: 0;
+  border-radius: 0;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  font-weight: 400;
+  line-height: 1;
+  min-width: 0;
+  transition: opacity $trs;
+
+  @include hover {
+    opacity: 0.8;
+  }
+
+  &::after {
+    @include background(contain);
+    background-image: url('./assets/ico-play.svg');
+    content: '';
+    display: block;
+    height: 28px;
+    margin-left: 14px;
+    width: 28px;
+  }
+}

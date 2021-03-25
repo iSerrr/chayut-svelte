@@ -1,0 +1,19 @@
+.b-form-and-content--layout-form-centered {
+  text-align: center;
+  
+  .col {
+    flex-basis: auto;
+  }
+}
+
+.b-form-and-content--layout-form-left {
+  .row {
+    flex-direction: row-reverse;
+  }
+}
+
+.b-form-and-content--layout-form-right {
+  .row {
+    flex-direction: row;
+  }
+}

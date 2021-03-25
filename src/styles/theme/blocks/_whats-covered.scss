@@ -1,0 +1,146 @@
+/**
+ *
+ * Whats Covered
+ *
+ */
+
+.b-whats-covered {
+  padding: 34px 0;
+  text-align: center;
+
+  @include mobile-sm-up {
+    padding: 57px 0;
+  }
+
+  @include desktop-md-up {
+    padding: 77px 0 105px;
+  }
+
+  &__head,
+  &__text,
+  &__actions {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 320px;
+
+    @include mobile-sm-up {
+      max-width: 400px;
+    }
+  }
+
+  &__head {
+    padding-bottom: 20px;
+
+    @include tablet-up {
+      max-width: 795px;
+    }
+
+    @include desktop-up {
+      padding-bottom: 42px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.4;
+
+    @include tablet-up {
+      max-width: 610px;
+    }
+
+    @include desktop-up {
+      font-size: 16px;
+      line-height: 1.3;
+    }
+  }
+
+  &__actions {
+    margin-top: 25px;
+  }
+
+  .chayuta-swiper-pagination-bullets {
+    position: static;
+  }
+}
+
+/**
+ *
+ * Slider Bubbles
+ *
+ */
+
+.slider-bubbles {
+  padding: 35px 0;
+
+  @include mobile-sm-up {
+    padding-top: 15px;
+  }
+
+  @include desktop-up {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1104px;
+    padding-bottom: 19px;
+  }
+
+  &__clip {
+    padding-bottom: 36px;
+
+    @include desktop-up {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 -25px;
+      max-width: none;
+      padding-bottom: 0;
+      transform: none !important; // override swiper transform
+      width: auto;
+    }
+  }
+
+  &__slide {
+    width: auto;
+
+    @include desktop-up {
+      flex-basis: 20%;
+      padding: 0 25px 40px;
+    }
+  }
+}
+
+/**
+ *
+ * Box Bubble
+ *
+ */
+
+.box-bubble {
+  position: relative;
+
+  @include tablet-up {
+    opacity: 0;
+  }
+
+  &__image {
+    left: 50%;
+    position: absolute;
+    top: 21px;
+    transform: translateX(-50%);
+  }
+
+  &__title {
+    bottom: 32px;
+    font-family: $font-practica-narrow;
+    font-size: 22px;
+    left: 50%;
+    line-height: 1.1;
+    min-width: 90%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+  &.animate {
+    @include tablet-up {
+      animation: bounceIn 0.75s 1 forwards;
+    }
+  }
+}

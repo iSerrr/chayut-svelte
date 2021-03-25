@@ -1,0 +1,232 @@
+.c-modal {
+  .c-block {
+    background-color: transparent;
+  }
+}
+
+.c-modal--style-lightbox {
+  .modal-header {
+    border-bottom: 0;
+    padding: 0;
+
+    .modal-title {
+      display: none;
+    }
+  }
+
+  .modal-dialog {
+    max-width: 100%;
+  }
+
+  .modal-body {
+    padding: 0;
+  }
+
+  .modal-content {
+    background: transparent;
+    border: 0;
+
+    .close {
+      color: #fff;
+      opacity: 1;
+      padding: 10px 16px;
+      position: fixed;
+      right: 40px;
+      text-shadow: none;
+      top: 40px;
+    }
+  }
+}
+
+/**
+ *
+ * Modal Flex
+ * Specific styles
+ * for form and background
+ *
+ */
+
+.c-modal--style-flex {
+  .modal-title {
+    display: none;
+  }
+
+  .modal-header {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    color: $white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 22;
+
+    .close {
+      color: $white;
+      opacity: 1;
+      text-shadow: none;
+    }
+  }
+
+  .modal-content {
+    height: 800px;
+
+    @include tablet-down {
+      height: 640px;
+    }
+
+    @include mobile-down {
+      height: 480px;
+    }
+  }
+
+  .modal-body {
+    color: $white;
+    direction: rtl;
+    padding: 135px 260px 0 0;
+    text-align: right;
+    z-index: 15;
+
+    @include tablet-down {
+      padding-right: 170px;
+    }
+
+    @include mobile-down {
+      padding: 120px 20px 0;
+    }
+
+    h4,
+    h2 {
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      padding-right: 15px;
+    }
+
+    h4 {
+      font-size: 39px;
+      font-weight: 300;
+      margin-bottom: -14px;
+
+      @include mobile-down {
+        font-size: 22px;
+        margin-bottom: 2px;
+      }
+    }
+
+    h2 {
+      font-family: $font-practica-narrow;
+      font-size: 70px;
+      font-weight: 400;
+      margin-bottom: 22px;
+
+      @include mobile-down {
+        font-size: 36px;
+      }
+    }
+  }
+
+  .modal-dialog {
+    max-width: 800px;
+
+    @include mobile-down {
+      max-width: 414px;
+    }
+  }
+
+  // Form In Modal
+  form {
+    &::placeholder {
+      color: $form-text;
+      opacity: 1;
+    }
+  }
+
+  .form-label {
+    display: none;
+  }
+
+  .form-field {
+    border: 0;
+    color: $form-text;
+    font-size: 24px;
+    font-weight: 300;
+    height: 68px;
+    letter-spacing: 0.01em;
+    padding: 0 25px 0 180px;
+    width: 100%;
+
+    @include mobile-down {
+      font-size: 16px;
+      height: 46px;
+    }
+
+    &:focus,
+    &:active {
+      box-shadow: none;
+      outline: 0;
+    }
+  }
+
+  .form-horizontal {
+    font-family: $font-practica;
+
+    br {
+      display: none;
+    }
+  }
+
+  .form-horizontal__inner {
+    border-radius: 35px;
+    box-shadow: 0 5px 16px rgba($black, 0.2);
+    display: flex;
+    flex-direction: row-reverse;
+    height: 68px;
+    margin-left: auto;
+    overflow: hidden;
+    position: relative;
+    width: 485px;
+
+    @include mobile-down {
+      height: 46px;
+      max-width: 440px;
+      width: auto;
+    }
+  }
+
+  .form-horizontal__submit {
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .wpcf7-form-control-wrap {
+    display: block;
+  }
+
+  .btn-submit {
+    @include button-height(68px);
+    border-radius: 35px;
+    min-width: 150px;
+
+    @include mobile-down {
+      @include button-height(46px);
+      min-width: 120px;
+    }
+  }
+
+  // Background
+  .wp-block-cover {
+    @include position-fill;
+    z-index: -1;
+  }
+
+  .wp-block-cover.has-background-dim::before {
+    display: none;
+  }
+
+  .container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

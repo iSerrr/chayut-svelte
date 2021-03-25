@@ -1,0 +1,7 @@
+.wpcf7 {
+  [type='url'],
+  [type='email'],
+  [type='tel'] {
+    direction: rtl !important;
+  }
+}

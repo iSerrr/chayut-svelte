@@ -1,0 +1,9 @@
+@each $side in $margin-sides {
+  .c-margin--#{$side} {
+    @each $name, $size in $margin-sizes {
+      &-#{$name} {
+        padding-#{$side}: #{$size} !important;
+      }
+    }
+  }
+}

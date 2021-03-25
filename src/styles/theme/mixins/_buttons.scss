@@ -1,0 +1,91 @@
+// Active button selector.
+@mixin btn-active-selector {
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    @content;
+  }
+}
+
+// Render a button (taken from Bootstrap).
+@mixin btn {
+  @include button-size(
+    $btn-padding-y,
+    $btn-padding-x,
+    $btn-font-size,
+    $btn-line-height,
+    $btn-border-radius
+  );
+  @include transition($btn-transition);
+  background-color: transparent;
+  border: $btn-border-width solid transparent;
+  color: $body-color;
+  /* stylelint-disable */
+  display: inline-block;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+
+  @include hover {
+    color: $body-color;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: $btn-focus-box-shadow;
+    outline: 0;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    @include box-shadow(none);
+    opacity: $btn-disabled-opacity;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    @include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+  /* stylelint-enable */
+}
+
+// Render a button in outline style.
+@mixin btn-outline($color) {
+  @include btn();
+  @include button-outline-variant($color);
+}
+
+// Completely remove the default button appearance.
+@mixin remove-button-appearance() {
+  appearance: none;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  outline: inherit;
+  padding: 0;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+/**
+ *
+ * Create Button
+ * Size
+ *
+ */
+
+@mixin button-height($value: 52px) {
+  height: $value;
+  line-height: ($value - 4px);
+}

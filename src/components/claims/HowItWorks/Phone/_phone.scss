@@ -1,0 +1,262 @@
+.phone {
+  background: url('/assets/img/claims/how-to-works/phone.svg') no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 228px;
+  position: relative;
+  box-shadow: -10px 10px 32px rgba(0, 0, 0, 0.2);
+  border-radius: 33px;
+  border: 1px solid #000;
+  font-size: 8px;
+
+  @include mobile-sm-up {
+    width: 276px;
+    font-size: 9px;
+  }
+
+  @include tablet-up {
+    width: 306px;
+    font-size: 10px;
+  }
+
+  @include tablet-large-up {
+    width: 335px;
+    font-size: 11px;
+  }
+
+  @include desktop-up {
+    width: 347px;
+    font-size: 11.5px;
+  }
+  @include desktop-xxl-up {
+    width: 347px;
+    font-size: 12px;
+  }
+
+  &__skeleton {
+    padding-bottom: calc(100% * 1.91);
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 60px 25px 60px 30px;
+    display: flex;
+    flex-direction: column;
+
+    @include mobile-sm-up {
+      padding: 75px 30px 60px 35px;
+    }
+
+    @include tablet-up {
+      padding: 80px 35px 60px 40px;
+    }
+
+    @include tablet-large-up {
+      padding: 85px 40px 60px 45px;
+    }
+
+    @include tablet-large-up {
+      padding: 88px 40px 60px 52px;
+    }
+
+    @include desktop-xxl-up {
+      padding: 90px 40px 60px 45px;
+    }
+  }
+
+  &__in-message,
+  &__out-message {
+    font-family: 'Open Sans Hebrew', sans-serif;
+    color: #181D23;
+    display: inline-block;
+    line-height: 1.5em;
+
+    max-width: 65%;
+    opacity: unset;
+    margin-bottom: 7px;
+    font-size: 1em;
+
+    & p {
+      padding: 6px;
+      margin: 0;
+      @include mobile-sm-up {
+        padding: 8px;
+      }
+
+      @include tablet-up {
+        padding: 8px;
+      }
+
+      @include desktop-xxl-up {
+        padding: 10px;
+      }
+    }
+    & p:nth-child(2) {
+      margin-top: 3px;
+    }
+
+    @include mobile-sm-up {
+      margin-bottom: 10px;
+    }
+
+    @include tablet-up {
+      margin-bottom: 15px;
+    }
+
+    @include desktop-xxl-up {
+      margin-bottom: 15px;
+      max-width: 75%;
+    }
+  }
+
+  &__in-message {
+    position: relative;
+    margin-left: 35px;
+    margin-right: auto;
+    transform-origin: left;
+
+    & p {
+      background: #ffffff;
+      border-radius: 0 10px 10px 10px;
+    }
+
+    @include mobile-sm-up {
+      margin-left: 38px;
+    }
+
+    @include tablet-up {
+      margin-left: 41px;
+    }
+
+    @include desktop-up {
+      margin-left: 45px;
+    }
+
+    @include desktop-xxl-up {
+      margin-left: 50px;
+    }
+
+    &:before {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      background: url('/assets/img/claims/how-to-works/dog-avatar.svg'), rgb(255, 255, 255);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      background-size: cover;
+      border: 2px solid #fff;
+      overflow: hidden;
+      content: '';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      top: 0;
+      left: -7px;
+      transform: translateX(-100%);
+
+      @include mobile-sm-up {
+        width: 31px;
+        height: 31px;
+      }
+
+      @include tablet-up {
+        width: 35px;
+        height: 35px;
+      }
+
+      @include desktop-up {
+        width: 40px;
+        height: 40px;
+      }
+
+      @include desktop-up {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    &--without-avatar {
+      margin-top: -6px;
+
+      &:before {
+        display: none;
+      }
+
+      @include tablet-up {
+        margin-top: -10px;
+      }
+    }
+  }
+
+  &__out-message {
+    transform-origin: right;
+    margin-left: auto;
+    margin-right: 0;
+
+    & p {
+      color: #fff;
+      border-radius: 10px 0 10px 10px;
+      background: #5087D9;
+    }
+  }
+
+  &__message-with-img {
+    transform-origin: right;
+    opacity: unset;
+    width: 65%;
+    margin-bottom: 15px;
+
+    @include mobile-sm-up {
+      margin-bottom: 20px;
+    }
+    @include desktop-up {
+      margin-bottom: 30px;
+    }
+    @include desktop-xxl-up {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__message-img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__btn {
+    border: none;
+    opacity: unset;
+    background: #FFCD00;
+    box-shadow: 0 2.5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    font-family: 'Open Sans Hebrew Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 1.47em;
+    padding: 7px 0;
+    width: 80%;
+    margin: 0 auto;
+
+    @include mobile-sm-up {
+      padding: 10px 0;
+    }
+    @include desktop-up {
+      padding: 12px 0;
+    }
+
+    & span:after {
+      content: url('/assets/img/claims/how-to-works/btn-ico.svg');
+      margin-right: 5px;
+    }
+  }
+}
+
+.get-message {
+  animation: .25s ease-in both get-message;
+}
+
+.hidden {
+  animation: .1s ease-in both out-message;
+}

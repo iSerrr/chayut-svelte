@@ -1,0 +1,8 @@
+.c-social {
+  @include list-inline();
+
+  &__link {
+    height: 37px;
+    width: 37px;
+  }
+}

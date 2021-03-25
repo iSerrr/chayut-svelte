@@ -1,0 +1,101 @@
+// Declare font-faces here.
+// Use https://transfonter.org/ to convert fonts to other formats.
+@font-face {
+  font-display: swap;
+  font-family: 'Practica';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/assets/fonts/Practica-Bold.woff2') format('woff2'),
+    url('/assets/fonts/Practica-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Practica';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/Practica.woff2') format('woff2'),
+    url('/assets/fonts/Practica.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Practica';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/PracticaLight.woff2') format('woff2'),
+    url('/assets/fonts/PracticaLight.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Practica';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/PracticaBlack.woff2') format('woff2'),
+    url('/assets/fonts/PracticaBlack.woff') format('woff');
+}
+
+@font-face {
+  font-display: block;
+  font-family: 'PracticaLight';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/PracticaLight.woff2') format('woff2'),
+    url('/assets/fonts/PracticaLight.woff') format('woff');
+}
+
+@font-face {
+  font-display: block;
+  font-family: 'PracticaNarrow';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/PracticaNarrow.woff2') format('woff2'),
+    url('/assets/fonts/PracticaNarrow.woff') format('woff');
+}
+
+@font-face {
+  font-display: block;
+  font-family: 'PracticaNarrow';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/PracticaNarrow-Bold.woff2') format('woff2'),
+    url('/assets/fonts/PracticaNarrow-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-display: block;
+  font-family: 'PracticaNarrow';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/PracticaNarrowBlack.woff2') format('woff2'),
+    url('/assets/fonts/PracticaNarrowBlack.woff') format('woff');
+}
+
+/* lato-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'),
+    url('/assets/fonts/lato-v16-latin-regular.woff2') format('woff2'),
+    url('/assets/fonts/lato-v16-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans Cond H';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/OpenSansHebrewCondensed-Regular.woff2') format('woff2'),
+    url('/assets/fonts/OpenSansHebrewCondensed-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans Cond H';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/assets/fonts/OpenSansHebrewCondensed-ExtraBold.woff2') format('woff2'),
+    url('/assets/fonts/OpenSansHebrewCondensed-ExtraBold.woff') format('woff');
+}
+

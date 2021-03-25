@@ -1,0 +1,49 @@
+/**
+ *
+ * Nav Main
+ *
+ */
+
+.nav-main {
+  font-size: $fz-md;
+  font-weight: 400;
+  padding: 0;
+
+  @include desktop-md-up {
+    font-weight: 300;
+    font-family: $font-practica-narrow;
+    font-size: 23px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  @include desktop-md-down {
+    display: block;
+  }
+
+  a {
+    color: inherit;
+    transition: color $trs;
+
+    &:hover {
+      color: $c-supernova;
+      text-decoration: none;
+    }
+  }
+
+  .current-menu-item {
+    > a {
+      color: $c-supernova;
+    }
+  }
+
+  > li + li {
+    @include desktop-md-up {
+      margin-right: 60px;
+    }
+
+    @include desktop-md-down {
+      margin-top: 23px;
+    }
+  }
+}

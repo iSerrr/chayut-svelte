@@ -1,0 +1,357 @@
+//@import '../../airfleet/styles/theme/theme/index.scss';
+//@import '../site.scss';
+//@import '../_partials/contact-dialog.scss';
+
+.ts-width-limiter {
+  max-width: 2550px;
+  margin: auto;
+  position: relative;
+}
+
+section.why {
+  position: relative;
+
+  .body {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+
+    .section-buildings__title {
+      font-family: $font-practica-narrow;
+      font-size: 32px;
+      font-weight: 400;
+      color: $white;
+      margin-bottom: 0;
+      text-align: center;
+
+      @include tablet-up {
+        margin-bottom: 15px;
+      }
+
+      @include tablet-large-up {
+        margin-bottom: 24px;
+        text-align: center;
+      }
+    }
+
+    .section-buildings__boxes {
+      @include tablet-large-up {
+        margin-bottom: 20px;
+        overflow: visible;
+      }
+
+      &-clip {
+        padding: 17px 0 30px;
+
+        @include mobile-sm-up {
+          padding-bottom: 35px;
+        }
+
+        @include tablet-large-up {
+          align-items: center;
+          padding-bottom: 41px;
+          padding-top: 0;
+          transform: none !important; // override swiper transform
+        }
+      }
+
+      &-item {
+        height: auto;
+        max-width: 250px;
+
+
+        @include tablet-large-up {
+          max-width: 254px;
+
+          &:nth-child(1),
+          &:nth-child(5) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .section-buildings__box {
+      background-color: $white;
+      border: 2px solid $c-box-bd;
+      border-radius: 10px;
+      box-shadow: $box-shadow;
+      height: 100%;
+      min-height: 137px;
+      padding: 20px 25px 16px;
+      text-align: right;
+
+      @include tablet-large-up {
+        background-color: $building-box-bg;
+      }
+
+      &-title {
+        font-family: $font-practica-narrow;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+
+  }
+
+  .sky {
+    height: 830px;
+    background-color: #8bb5f4;
+
+    .skyline {
+      position: absolute;
+      bottom: 230px;
+      height: 375px;
+      width: 100%;
+
+      &>div {
+        height: 100%;
+
+        img {
+          height: 100%;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-47%);
+          bottom: 0px;
+          width: auto;
+          max-width: unset;
+        }
+      }
+
+      &>div.clouds {
+        position: absolute;
+        top: 5%;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        text-align: center;
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+
+    .skyline-2 {
+      &>div {
+        img {
+          height: 50%;
+          transform: translateX(-43%);
+        }
+      }
+    }
+  }
+
+  .image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 230px;
+    width: 100%;
+    background-color: #edece8;
+
+    img {
+      height: 456px;
+      max-width: unset;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-48%);
+    }
+  }
+
+  @include mobile-sm-up {
+    .body {
+      top: 250px;
+    }
+
+    .sky {
+      height: 990px;
+
+      .skyline {
+        bottom: 215px;
+        height: 365px;
+
+        &>div {
+          img {
+            transform: translateX(-46%);
+          }
+        }
+      }
+
+      .skyline-2 {
+        height: 325px;
+
+        &>div {
+          img {
+            transform: translateX(-40%);
+          }
+        }
+      }
+    }
+
+    .image {
+      height: 215px;
+
+      img {
+        height: 426px;
+        transform: translateX(-46.5%);
+      }
+    }
+  }
+
+  @include tablet-up {
+    .body {
+      top: 340px;
+    }
+
+    .sky {
+      height: 1065px;
+
+      .skyline {
+        height: 335px;
+
+        &>div {
+          img {
+            transform: translateX(-44%);
+          }
+        }
+      }
+
+      .skyline-2 {
+        &>div {
+          img {
+            transform: translateX(-41%);
+          }
+        }
+      }
+    }
+  }
+
+  @include tablet-large-up {
+    .body {
+      width: 420px;
+      z-index: 122;
+      top: 480px;
+
+      .section-buildings__boxes-clip {
+        flex-direction: column;
+      }
+    }
+
+    .sky {
+      .skyline {
+        bottom: 261px;
+        height: 415px;
+
+        &>div {
+          img {
+            transform: translateX(-57%);
+          }
+        }
+      }
+
+      .skyline-2 {
+        &>div {
+          img {
+            transform: translateX(-52%);
+          }
+        }
+      }
+    }
+
+    .image {
+      height: 260px;
+
+      img {
+        height: 516px;
+        transform: translateX(-52.5%);
+      }
+    }
+  }
+
+  @include desktop-up {
+    .body {
+      z-index: 122;
+      top: 480px;
+      right: 10%;
+    }
+
+    .sky {
+      height: 1147px;
+
+      .skyline {
+        bottom: 311px;
+        height: 505px;
+
+        &>div {
+          img {
+            transform: translateX(-59%);
+          }
+        }
+      }
+
+      .skyline-2 {
+        &>div {
+          img {
+            transform: translateX(-54%);
+          }
+        }
+      }
+    }
+
+    .image {
+      height: 311px;
+
+      img {
+        height: 616px;
+        transform: translateX(-54%);
+      }
+    }
+  }
+
+  @include desktop-md-up {
+    .body {
+      right: 16%;
+    }
+  }
+
+  @include desktop-xxl-up {
+    .body {
+      top: 450px;
+      right: 20%;
+    }
+
+    .sky {
+      height: 1457px;
+
+      .skyline {
+        bottom: 417px;
+        height: 675px;
+      }
+    }
+
+    .image {
+      height: 416px;
+
+      img {
+        height: 826px;
+        transform: translateX(-54%);
+      }
+    }
+  }
+}
+
+@include desktop-up {
+  .slider-bubbles__pagination {
+    display: none;
+  }
+}

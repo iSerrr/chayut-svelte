@@ -1,0 +1,46 @@
+.how-it-works {
+  background: #fff;
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-bottom: 15px;
+
+    @include tablet-large-up {
+      padding-bottom: 165px;
+    }
+
+    @include desktop-up {
+      padding-bottom: 140px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet-large-up {
+      width: auto;
+    }
+  }
+
+  &__title {
+    color: #181D23;
+    font-weight: 400;
+    margin-bottom: 30px;
+
+    @include tablet-large-up {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+
+

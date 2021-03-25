@@ -1,0 +1,28 @@
+.c-navbar {
+  .navbar-brand {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  &__logo {
+    height: 40px;
+    width: auto;
+  }
+
+  &--position-top,
+  &--position-scrolled {
+    transition: background-color 0.3s ease;
+
+    .nav-link {
+      color: #fff;
+    }
+  }
+
+  &--position-top {
+    background-color: $gray-400;
+  }
+
+  &--position-scrolled {
+    background-color: $color-havelock-blue;
+  }
+}

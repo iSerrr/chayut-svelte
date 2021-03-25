@@ -1,0 +1,19 @@
+.c-section-header {
+  text-align: center;
+
+  &__title {
+    @include section-heading(true);
+    font-family: $font-practica-narrow;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 7px;
+
+    @include desktop-up {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__sub-title {
+    @include section-subtitle;
+  }
+}

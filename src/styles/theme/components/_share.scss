@@ -1,0 +1,28 @@
+.c-share {
+  &__list {
+    @include list-inline();
+  }
+
+  &__btn {
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    height: 30px;
+    line-height: 2;
+    text-align: center;
+    text-decoration: none;
+    width: 30px;
+
+    &:hover {
+      color: #fff;
+    }
+
+    @each $key, $val in $social-colors {
+      &-#{$key} {
+        background-color: $val;
+      }
+    }
+
+  }
+}

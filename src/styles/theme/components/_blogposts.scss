@@ -1,0 +1,152 @@
+/**
+ *
+ * Blogposts
+ *
+ */
+
+.blogposts {
+  color: $white;
+  position: relative;
+  text-align: center;
+  z-index: 150;
+
+  &__foot a {
+    color: #fff;
+    border: 2px solid;
+    padding: .3em 2em;
+
+    &:hover {
+      color: #0056b3;
+      border-color: #0056b3;
+    }
+  }
+
+  &__head {
+    margin: 0 auto 25px;
+    max-width: 320px;
+    text-align: center;
+
+    @include mobile-sm-up {
+      max-width: 400px;
+    }
+
+    @include tablet-up {
+      margin-bottom: 42px;
+      max-width: 80%;
+    }
+
+    @include desktop-up {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__body {
+    @include desktop-up {
+      margin: 0 auto;
+      max-width: 1314px;
+      overflow: hidden;
+    }
+  }
+
+  &__title {
+    @include section-heading(true);
+    margin-bottom: 5px;
+  }
+
+  &__subtitle {
+    font-family: $font-practica;
+    font-size: $fz-md;
+    font-weight: 400;
+    line-height: 1.3;
+
+    @include desktop-up {
+      font-size: $fz-desktop;
+    }
+  }
+}
+
+/**
+ *
+ * Blogposts Slider
+ *
+ */
+
+.blogposts__slider {
+  @include desktop-up {
+    overflow: visible;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &-clip {
+    padding-bottom: 25px;
+
+    @include mobile-sm-up {
+      padding-bottom: 35px;
+    }
+  }
+
+  &-slide {
+    height: auto;
+    max-width: 302px;
+
+    @include desktop-up {
+      max-width: none;
+    }
+  }
+
+  .box-blogpost {
+    height: 100%;
+  }
+}
+
+/**
+ *
+ * Box Blogpost
+ *
+ */
+
+.box-blogpost {
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: $box-shadow-darker;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow $trs;
+
+  @include tablet-large-up {
+    &:hover {
+      box-shadow: 0 0 0 rgba($black, 0.25);
+    }
+  }
+
+  &__link {
+    @include position-fill;
+    z-index: 20;
+  }
+
+  &__body {
+    color: $c-dark-grey-1;
+    line-height: 1.3;
+    padding: 25px 30px 35px;
+    text-align: right;
+  }
+
+  &__image {
+    @include background;
+    background-color: $c-supernova;
+    height: 176px;
+    filter: saturate(0.4);
+  }
+
+  &__category {
+    color: #4570b0;
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  &__description {
+    font-size: $fz-md;
+    font-size: 16px;
+  }
+}

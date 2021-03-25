@@ -1,0 +1,12 @@
+.b-separator {
+  hr {
+    border-color: $hr-border-color;
+    border-width: $hr-border-width;
+    clear: both;
+    line-height: 0;
+    margin: auto auto $hr-margin-y;
+    max-height: 0;
+    padding: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,18 @@
+@function font-weight($key: 'regular') {
+  @return map-get($font-weights, $key);
+}
+
+// Convert pixels to rem.
+@function px-to-rem($value: 16, $base: 16) {
+  @return ($value / $base) * 1rem;
+}
+
+// Convert pixels to em.
+@function px-to-em($value: 16, $base: 16) {
+  @return ($value / $base) * 1em;
+}
+
+// Convert Adobe XD values to em (usually for letter-spacing).
+@function xd-to-em($spacing) {
+  @return ($spacing / 1000) * 1em;
+}

@@ -1,0 +1,22 @@
+/**
+ *
+ * Section 404
+ *
+ */
+
+.section-404 {
+  background-color: $c-light-blue;
+  color: $white;
+  padding: 250px 0;
+  position: relative;
+  text-align: center;
+
+  &__title {
+    @extend %heading-h1;
+  }
+
+  &__image {
+    @include position-fill;
+    z-index: -1;
+  }
+}

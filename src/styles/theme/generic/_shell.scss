@@ -1,0 +1,19 @@
+/**
+ *
+ * Shell
+ *
+ */
+
+.shell {
+  margin: 0 auto;
+  max-width: $shell-max-width-lg + ($shell-padding * 2);
+  padding: 0 $shell-padding;
+
+  &-fluid {
+    max-width: 100%;
+  }
+
+  &-sm {
+    max-width: $shell-max-width-sm + ($shell-padding * 2);
+  }
+}

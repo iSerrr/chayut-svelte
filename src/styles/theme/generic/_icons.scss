@@ -1,0 +1,21 @@
+/**
+ *
+ * Icons
+ *
+ */
+
+.ico {
+  @include background(contain);
+  display: inline-block;
+
+  &-close-nav {
+    background-image: url('/assets/img/common/ico-close-nav.svg');
+    display: none;
+    height: 13px;
+    width: 13px;
+
+    @include desktop-md-down {
+      display: block;
+    }
+  }
+}

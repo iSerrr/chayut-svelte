@@ -1,0 +1,10 @@
+@mixin large-images {
+  .c-picture {
+    display: block;
+
+    img {
+      max-width: none;
+      width: 100%;
+    }
+  }
+}
