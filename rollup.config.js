@@ -5,6 +5,7 @@ import livereload from 'rollup-plugin-livereload'
 import {terser} from 'rollup-plugin-terser'
 import css from 'rollup-plugin-css-only'
 import scss from 'rollup-plugin-scss'
+import sass from 'rollup-plugin-sass';
 import preprocess from 'svelte-preprocess'
 import postcss from 'rollup-plugin-postcss'
 import autoprefixer from 'autoprefixer'
@@ -61,7 +62,6 @@ const commonPlugins = [
             handler(warning)
         },
     }),
-    scss({output: 'dist/main.css'}),
     resolve({
         browser: true,
         dedupe: ['svelte']
@@ -72,25 +72,25 @@ const commonPlugins = [
     production && terser()
 ]
 
-export default
-    // {
-    //     input: 'src/en.js',
-    //     output: {
-    //         sourcemap: true,
-    //         format: 'iife',
-    //         name: 'app',
-    //         file: 'dist/en/main.js'
-    //     },
-    //     plugins: [
-    //         copy({
-    //             targets: [{src: 'sites/en/index.html', dest: 'dist/en'}]
-    //         }),
-    //         ...commonPlugins
-    //     ],
-    //     watch: {
-    //         clearScreen: false
-    //     }
-    // },
+export default [
+    {
+        input: 'src/en.js',
+        output: {
+            sourcemap: true,
+            format: 'iife',
+            file: `dist/en/main.js`
+        },
+        plugins: [
+            copy({
+                targets: [{src: 'sites/en/index.html', dest: 'dist/en'}]
+            }),
+            ...commonPlugins,
+            scss({output: 'dist/en/main.css'})
+        ],
+        watch: {
+            clearScreen: false
+        }
+    },
     {
         input: 'src/he.js',
         output: {
@@ -103,10 +103,11 @@ export default
             copy({
                 targets: [{src: 'sites/he/index.html', dest: 'dist/he'}]
             }),
-            ...commonPlugins
+            ...commonPlugins,
+            scss({output: 'dist/he/main.css'})
         ],
         watch: {
             clearScreen: false
         }
-    }
+    }]
 
